@@ -1,0 +1,2011 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Athena vs Sagan — Stop Paying a 73% Markup on Your Global Talent</title>
+  <meta name="description" content="Athena charges you $3,000/mo but pays your assistant just $800. With Sagan, you hire directly — no middleman forever tax. See the real numbers.">
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Newsreader:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --navy: #1a2332;
+      --navy-deep: #0f1720;
+      --slate: #334155;
+      --slate-light: #64748b;
+      --sagan: #1e3a5f;
+      --sagan-light: #dbeafe;
+      --sagan-bg: #eff6ff;
+      --sagan-accent: #152d4a;
+      --red: #dc2626;
+      --red-light: #fef2f2;
+      --red-dark: #991b1b;
+      --gold: #d97706;
+      --white: #ffffff;
+      --off-white: #fafbfc;
+      --gray-50: #f8fafc;
+      --gray-100: #f1f5f9;
+      --gray-200: #e2e8f0;
+      --gray-300: #cbd5e1;
+      --gray-400: #94a3b8;
+      --gray-500: #64748b;
+      --gray-600: #475569;
+      --gray-700: #334155;
+      --gray-800: #1e293b;
+      --gray-900: #0f172a;
+      --text: #1e293b;
+      --text-secondary: #475569;
+      --border: #e2e8f0;
+      --radius: 12px;
+      --radius-lg: 16px;
+      --shadow-sm: 0 1px 2px rgba(0,0,0,0.05);
+      --shadow: 0 1px 3px rgba(0,0,0,0.08), 0 1px 2px rgba(0,0,0,0.04);
+      --shadow-md: 0 4px 12px rgba(0,0,0,0.06), 0 2px 4px rgba(0,0,0,0.04);
+      --shadow-lg: 0 10px 30px rgba(0,0,0,0.08), 0 4px 12px rgba(0,0,0,0.04);
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      color: var(--text);
+      background: var(--white);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .serif { font-family: 'Newsreader', Georgia, 'Times New Roman', serif; }
+
+    .container {
+      max-width: 1080px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    /* ── ANIMATIONS ── */
+    .reveal {
+      opacity: 0;
+      transform: translateY(24px);
+      transition: opacity 0.6s ease, transform 0.6s ease;
+    }
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    .reveal-delay-1 { transition-delay: 0.1s; }
+    .reveal-delay-2 { transition-delay: 0.2s; }
+
+    /* ── NAV ── */
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(255,255,255,0.92);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+    }
+    .nav-inner {
+      max-width: 1080px;
+      margin: 0 auto;
+      padding: 0 24px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: 60px;
+    }
+    .nav-logo {
+      color: var(--gray-900);
+      font-weight: 800;
+      font-size: 1rem;
+      text-decoration: none;
+      letter-spacing: -0.02em;
+    }
+    .nav-logo span { color: var(--sagan); }
+    .nav-cta {
+      background: var(--sagan);
+      color: var(--white);
+      padding: 10px 22px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 0.875rem;
+      transition: all 0.2s;
+    }
+    .nav-cta:hover {
+      background: var(--sagan-accent);
+      box-shadow: var(--shadow-md);
+    }
+
+    /* ── HERO ── */
+    .hero {
+      padding: 80px 24px 88px;
+      text-align: center;
+      background: linear-gradient(180deg, var(--gray-50) 0%, var(--white) 100%);
+      border-bottom: 1px solid var(--border);
+    }
+    .hero-inner {
+      max-width: 760px;
+      margin: 0 auto;
+    }
+    .hero h1 {
+      font-size: clamp(2.2rem, 5vw, 3.2rem);
+      font-weight: 900;
+      line-height: 1.12;
+      letter-spacing: -0.035em;
+      color: var(--gray-900);
+      margin-bottom: 20px;
+    }
+    .hero h1 em {
+      font-family: 'Newsreader', Georgia, serif;
+      font-style: italic;
+      font-weight: 500;
+      color: var(--sagan);
+    }
+    .hero p {
+      color: var(--text-secondary);
+      font-size: 1.15rem;
+      max-width: 600px;
+      margin: 0 auto 36px;
+      line-height: 1.7;
+    }
+    .hero-cta {
+      display: inline-block;
+      background: var(--sagan);
+      color: var(--white);
+      padding: 16px 40px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 1rem;
+      transition: all 0.2s;
+      box-shadow: 0 2px 8px rgba(30, 58, 95, 0.25);
+    }
+    .hero-cta:hover {
+      background: var(--sagan-accent);
+      box-shadow: 0 4px 16px rgba(30, 58, 95, 0.35);
+      transform: translateY(-1px);
+    }
+    .hero-sub {
+      color: var(--gray-400);
+      font-size: 0.85rem;
+      margin-top: 16px;
+    }
+
+    /* ── PAY GAP CALLOUT ── */
+    .paygap-section {
+      padding: 0;
+      background: var(--red-dark);
+      color: var(--white);
+      border-bottom: 4px solid var(--red);
+    }
+    .paygap-inner {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 56px 24px;
+      text-align: center;
+    }
+    .paygap-label {
+      text-transform: uppercase;
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      color: rgba(255,255,255,0.5);
+      margin-bottom: 20px;
+    }
+    .paygap-headline {
+      font-size: clamp(1.4rem, 3.5vw, 2rem);
+      font-weight: 800;
+      line-height: 1.25;
+      letter-spacing: -0.02em;
+      margin-bottom: 28px;
+    }
+    .paygap-headline em {
+      font-family: 'Newsreader', Georgia, serif;
+      font-style: italic;
+      font-weight: 500;
+      color: #fca5a5;
+    }
+    .paygap-bars {
+      max-width: 560px;
+      margin: 0 auto 32px;
+    }
+    .paygap-bar-row {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      margin-bottom: 16px;
+    }
+    .paygap-bar-row:last-child { margin-bottom: 0; }
+    .paygap-bar-label {
+      width: 140px;
+      text-align: right;
+      font-size: 0.82rem;
+      font-weight: 600;
+      color: rgba(255,255,255,0.65);
+      flex-shrink: 0;
+    }
+    .paygap-bar-track {
+      flex: 1;
+      height: 40px;
+      background: rgba(255,255,255,0.08);
+      border-radius: 6px;
+      overflow: hidden;
+      position: relative;
+    }
+    .paygap-bar-fill {
+      height: 100%;
+      border-radius: 6px;
+      display: flex;
+      align-items: center;
+      padding: 0 14px;
+      font-weight: 800;
+      font-size: 0.95rem;
+      color: white;
+      min-width: 80px;
+    }
+    .paygap-bar-fill.talent { background: #ef4444; width: 27%; }
+    .paygap-bar-fill.athena { background: rgba(255,255,255,0.15); width: 73%; color: rgba(255,255,255,0.7); }
+    .paygap-bar-fill.sagan-talent { background: #3b82f6; width: 100%; }
+    .paygap-note {
+      font-size: 0.88rem;
+      color: rgba(255,255,255,0.5);
+      line-height: 1.6;
+      max-width: 520px;
+      margin: 0 auto;
+    }
+    .paygap-note strong {
+      color: rgba(255,255,255,0.85);
+    }
+
+    /* ── STATS ROW ── */
+    .stats-row {
+      padding: 56px 24px;
+      background: var(--white);
+      border-bottom: 1px solid var(--border);
+    }
+    .stats-inner {
+      max-width: 880px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 32px;
+      text-align: center;
+    }
+    .stat-number {
+      font-size: 2.2rem;
+      font-weight: 900;
+      letter-spacing: -0.03em;
+      color: var(--gray-900);
+      margin-bottom: 4px;
+    }
+    .stat-number.sagan-color { color: var(--sagan); }
+    .stat-number.red-color { color: var(--red); }
+    .stat-label {
+      font-size: 0.8rem;
+      color: var(--gray-500);
+      font-weight: 500;
+    }
+
+    /* ── SECTION ── */
+    section { padding: 80px 0; }
+    .section-label {
+      text-transform: uppercase;
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      color: var(--sagan);
+      margin-bottom: 12px;
+    }
+    .section-title {
+      font-size: clamp(1.75rem, 3.5vw, 2.4rem);
+      font-weight: 800;
+      letter-spacing: -0.03em;
+      margin-bottom: 12px;
+      line-height: 1.2;
+      color: var(--gray-900);
+    }
+    .section-title em {
+      font-family: 'Newsreader', Georgia, serif;
+      font-style: italic;
+      font-weight: 500;
+    }
+    .section-subtitle {
+      color: var(--text-secondary);
+      font-size: 1.05rem;
+      max-width: 560px;
+      line-height: 1.65;
+    }
+    .section-header {
+      text-align: center;
+      margin-bottom: 48px;
+    }
+    .section-header .section-subtitle {
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    /* ── MODEL COMPARISON ── */
+    .model-section {
+      background: var(--gray-50);
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+    }
+    .model-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 24px;
+    }
+    .model-card {
+      padding: 40px;
+      border-radius: var(--radius-lg);
+      border: 1px solid var(--border);
+    }
+    .model-card.athena-card {
+      background: var(--white);
+      border-color: var(--gray-200);
+    }
+    .model-card.sagan-card {
+      background: var(--sagan-bg);
+      border-color: #93c5fd;
+    }
+    .model-card h3 {
+      font-size: 1.1rem;
+      font-weight: 700;
+      margin-bottom: 8px;
+      letter-spacing: -0.01em;
+    }
+    .model-card.athena-card h3 { color: var(--gray-400); }
+    .model-card.sagan-card h3 { color: var(--sagan-accent); }
+    .model-tag {
+      display: inline-block;
+      padding: 4px 12px;
+      border-radius: 100px;
+      font-size: 0.7rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      margin-bottom: 24px;
+    }
+    .athena-card .model-tag {
+      background: var(--red-light);
+      color: var(--red);
+    }
+    .sagan-card .model-tag {
+      background: var(--sagan-light);
+      color: var(--sagan);
+    }
+    .model-price {
+      font-size: 2.4rem;
+      font-weight: 900;
+      letter-spacing: -0.03em;
+      margin-bottom: 4px;
+    }
+    .athena-card .model-price { color: var(--gray-400); }
+    .sagan-card .model-price { color: var(--sagan); }
+    .model-price-note {
+      font-size: 0.82rem;
+      color: var(--gray-400);
+      margin-bottom: 28px;
+      padding-bottom: 24px;
+      border-bottom: 1px solid var(--border);
+    }
+    .sagan-card .model-price-note { border-bottom-color: #93c5fd; }
+    .model-item {
+      display: flex;
+      gap: 12px;
+      margin-bottom: 14px;
+      font-size: 0.9rem;
+      line-height: 1.55;
+      color: var(--text-secondary);
+    }
+    .model-item:last-child { margin-bottom: 0; }
+    .model-item .icon {
+      flex-shrink: 0;
+      width: 20px;
+      height: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      font-size: 0.65rem;
+      margin-top: 2px;
+      font-weight: 700;
+    }
+    .athena-card .model-item .icon {
+      background: var(--red-light);
+      color: var(--red);
+    }
+    .sagan-card .model-item .icon {
+      background: var(--sagan-light);
+      color: var(--sagan);
+    }
+    .sagan-card .model-item { color: var(--text); }
+
+    /* ── COMPARISON TABLE ── */
+    .comparison-section {
+      background: var(--white);
+    }
+    .comparison-table {
+      width: 100%;
+      border-collapse: separate;
+      border-spacing: 0;
+      background: var(--white);
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      box-shadow: var(--shadow-md);
+      border: 1px solid var(--border);
+    }
+    .comparison-table thead th {
+      padding: 20px 24px;
+      font-size: 0.9rem;
+      font-weight: 700;
+      text-align: left;
+      border-bottom: 2px solid var(--gray-200);
+    }
+    .comparison-table thead th:first-child {
+      background: var(--gray-50);
+      color: var(--gray-500);
+      width: 34%;
+    }
+    .comparison-table thead th:nth-child(2) {
+      background: var(--red-light);
+      color: var(--gray-700);
+      width: 33%;
+    }
+    .comparison-table thead th:nth-child(3) {
+      background: var(--sagan-bg);
+      color: var(--gray-900);
+      width: 33%;
+    }
+    .winner-badge {
+      display: inline-block;
+      background: var(--sagan);
+      color: var(--white);
+      font-size: 0.6rem;
+      padding: 3px 8px;
+      border-radius: 4px;
+      margin-left: 8px;
+      vertical-align: middle;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      font-weight: 700;
+    }
+    .comparison-table td {
+      padding: 15px 24px;
+      border-bottom: 1px solid var(--gray-100);
+      font-size: 0.9rem;
+      vertical-align: middle;
+      color: var(--text);
+    }
+    .comparison-table tbody tr:hover td {
+      background: var(--gray-50);
+    }
+    .comparison-table tbody tr:hover td:nth-child(3) {
+      background: var(--sagan-bg);
+    }
+    .comparison-table tr:last-child td { border-bottom: none; }
+    .comparison-table td:first-child {
+      font-weight: 600;
+      color: var(--gray-600);
+      background: var(--gray-50);
+    }
+    .comparison-table td:nth-child(3) {
+      background: rgba(239, 246, 255, 0.5);
+    }
+    .comparison-table td small {
+      display: block;
+      color: var(--gray-400);
+      font-weight: 400;
+      margin-top: 2px;
+      font-size: 0.8rem;
+    }
+    .check { color: var(--sagan); font-weight: 600; }
+    .cross { color: var(--red); }
+    .neutral { color: var(--gray-400); }
+
+    /* ── CALCULATOR ── */
+    .calculator-section {
+      background: var(--navy);
+      color: var(--white);
+    }
+    .calculator-section .section-label { color: var(--sagan-light); }
+    .calculator-section .section-title { color: var(--white); }
+    .calculator-section .section-title em { color: rgba(255,255,255,0.7); }
+    .calculator-section .section-subtitle { color: rgba(255,255,255,0.5); }
+
+    .calc-card {
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: var(--radius-lg);
+      padding: 44px;
+      max-width: 840px;
+      margin: 0 auto;
+    }
+    .calc-inputs {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 24px;
+      margin-bottom: 36px;
+    }
+    .calc-field label {
+      display: block;
+      font-size: 0.75rem;
+      font-weight: 600;
+      color: rgba(255,255,255,0.4);
+      margin-bottom: 8px;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+    }
+    .calc-field input, .calc-field select {
+      width: 100%;
+      padding: 14px 16px;
+      background: rgba(255,255,255,0.08);
+      border: 1px solid rgba(255,255,255,0.12);
+      border-radius: 8px;
+      color: var(--white);
+      font-size: 1.1rem;
+      font-family: inherit;
+      font-weight: 700;
+      outline: none;
+      transition: border-color 0.2s;
+    }
+    .calc-field input:focus, .calc-field select:focus {
+      border-color: rgba(255,255,255,0.3);
+    }
+    .calc-field select option { background: var(--navy); color: var(--white); }
+    .calc-divider {
+      height: 1px;
+      background: rgba(255,255,255,0.08);
+      margin-bottom: 32px;
+    }
+    .calc-results {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+      margin-bottom: 24px;
+    }
+    .calc-result-card {
+      border-radius: var(--radius);
+      padding: 24px;
+    }
+    .calc-result-card.athena-calc {
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.08);
+    }
+    .calc-result-card.sagan-calc {
+      background: rgba(59, 130, 246, 0.1);
+      border: 1px solid rgba(30, 58, 95, 0.4);
+    }
+    .calc-result-label {
+      font-size: 0.7rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      margin-bottom: 8px;
+    }
+    .calc-result-card.athena-calc .calc-result-label { color: rgba(255,255,255,0.35); }
+    .calc-result-card.sagan-calc .calc-result-label { color: #93c5fd; }
+    .calc-result-amount {
+      font-size: 2rem;
+      font-weight: 900;
+      letter-spacing: -0.03em;
+    }
+    .calc-result-card.athena-calc .calc-result-amount { color: rgba(255,255,255,0.5); }
+    .calc-result-card.sagan-calc .calc-result-amount { color: var(--white); }
+    .calc-result-detail {
+      font-size: 0.78rem;
+      color: rgba(255,255,255,0.3);
+      margin-top: 6px;
+      line-height: 1.5;
+    }
+    .calc-savings {
+      text-align: center;
+      padding: 24px;
+      background: rgba(59, 130, 246, 0.08);
+      border: 1px solid rgba(59, 130, 246, 0.2);
+      border-radius: var(--radius);
+    }
+    .calc-savings-label {
+      font-size: 0.7rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: #93c5fd;
+      margin-bottom: 4px;
+    }
+    .calc-savings-amount {
+      font-size: 1.8rem;
+      font-weight: 900;
+      letter-spacing: -0.02em;
+      color: #93c5fd;
+    }
+    .calc-savings-note {
+      font-size: 0.8rem;
+      color: rgba(255,255,255,0.35);
+      margin-top: 6px;
+    }
+    .calc-talent-note {
+      text-align: center;
+      margin-top: 20px;
+      padding: 16px 24px;
+      background: rgba(239, 68, 68, 0.08);
+      border: 1px solid rgba(239, 68, 68, 0.2);
+      border-radius: var(--radius);
+      font-size: 0.82rem;
+      color: rgba(255,255,255,0.5);
+    }
+    .calc-talent-note strong {
+      color: #fca5a5;
+    }
+
+    /* ── MIDDLEMAN BREAKDOWN ── */
+    .middleman-section {
+      background: var(--gray-50);
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+    }
+    .middleman-visual {
+      max-width: 700px;
+      margin: 0 auto;
+    }
+    .middleman-row {
+      display: grid;
+      grid-template-columns: 200px 1fr;
+      gap: 24px;
+      align-items: center;
+      margin-bottom: 32px;
+    }
+    .middleman-row:last-child { margin-bottom: 0; }
+    .middleman-company {
+      text-align: right;
+      font-weight: 700;
+      font-size: 0.95rem;
+      color: var(--gray-600);
+    }
+    .middleman-company small {
+      display: block;
+      font-weight: 500;
+      font-size: 0.78rem;
+      color: var(--gray-400);
+      margin-top: 2px;
+    }
+    .middleman-bar-container {
+      position: relative;
+    }
+    .middleman-bar {
+      height: 56px;
+      border-radius: 8px;
+      display: flex;
+      overflow: hidden;
+    }
+    .middleman-bar .talent-share {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 800;
+      font-size: 0.85rem;
+      color: white;
+    }
+    .middleman-bar .company-share {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      font-size: 0.8rem;
+    }
+    /* Athena bar */
+    .middleman-row.athena-row .talent-share {
+      background: #ef4444;
+      width: 27%;
+    }
+    .middleman-row.athena-row .company-share {
+      background: #fee2e2;
+      color: var(--red-dark);
+      width: 73%;
+    }
+    /* Sagan bar */
+    .middleman-row.sagan-row .talent-share {
+      background: #3b82f6;
+      width: 100%;
+    }
+    .middleman-bar-labels {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 6px;
+      font-size: 0.72rem;
+      color: var(--gray-400);
+      font-weight: 500;
+    }
+
+    /* ── POST-HIRE ── */
+    .posthire-section {
+      background: var(--white);
+    }
+    .posthire-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 24px;
+    }
+    .posthire-card {
+      padding: 36px;
+      border-radius: var(--radius-lg);
+      border: 1px solid var(--border);
+    }
+    .posthire-card.athena-card {
+      background: var(--gray-50);
+    }
+    .posthire-card.sagan-card {
+      background: var(--sagan-bg);
+      border-color: #93c5fd;
+    }
+    .posthire-card h3 {
+      font-size: 1.05rem;
+      font-weight: 700;
+      margin-bottom: 24px;
+      letter-spacing: -0.01em;
+      padding-bottom: 16px;
+      border-bottom: 1px solid var(--border);
+    }
+    .posthire-card.athena-card h3 { color: var(--gray-400); }
+    .posthire-card.sagan-card h3 {
+      color: var(--sagan-accent);
+      border-bottom-color: #93c5fd;
+    }
+    .posthire-item {
+      display: flex;
+      gap: 12px;
+      margin-bottom: 16px;
+      font-size: 0.92rem;
+      line-height: 1.55;
+      color: var(--text-secondary);
+    }
+    .posthire-item:last-child { margin-bottom: 0; }
+    .posthire-item .icon {
+      flex-shrink: 0;
+      width: 20px;
+      height: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      font-size: 0.65rem;
+      margin-top: 2px;
+      font-weight: 700;
+    }
+    .athena-card .posthire-item .icon {
+      background: var(--red-light);
+      color: var(--red);
+    }
+    .sagan-card .posthire-item .icon {
+      background: var(--sagan-light);
+      color: var(--sagan);
+    }
+    .sagan-card .posthire-item { color: var(--text); }
+
+    /* ── TESTIMONIALS ── */
+    .testimonials-section {
+      background: var(--gray-50);
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+    }
+    .testimonial-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+    .testimonial-card {
+      background: var(--white);
+      border-radius: var(--radius);
+      padding: 32px;
+      border: 1px solid var(--border);
+      transition: box-shadow 0.25s, transform 0.25s;
+    }
+    .testimonial-card:hover {
+      box-shadow: var(--shadow-lg);
+      transform: translateY(-3px);
+    }
+    .testimonial-stars {
+      color: var(--gold);
+      font-size: 0.9rem;
+      margin-bottom: 16px;
+      letter-spacing: 2px;
+    }
+    .testimonial-text {
+      font-family: 'Newsreader', Georgia, serif;
+      font-size: 1rem;
+      color: var(--text);
+      line-height: 1.7;
+      margin-bottom: 24px;
+      font-style: italic;
+    }
+    .testimonial-divider {
+      height: 1px;
+      background: var(--gray-200);
+      margin-bottom: 16px;
+    }
+    .testimonial-author {
+      font-weight: 700;
+      font-size: 0.88rem;
+      color: var(--gray-900);
+    }
+    .testimonial-role {
+      font-size: 0.78rem;
+      color: var(--gray-400);
+      margin-top: 2px;
+    }
+
+    /* ── WALL OF LOVE ── */
+    .wall-section {
+      background: var(--white);
+    }
+    .wall-grid {
+      columns: 3;
+      column-gap: 16px;
+    }
+    .wall-card {
+      break-inside: avoid;
+      margin-bottom: 16px;
+      background: var(--white);
+      border-radius: var(--radius);
+      border: 1px solid var(--border);
+      overflow: hidden;
+      transition: box-shadow 0.25s, transform 0.25s;
+    }
+    .wall-card:hover {
+      box-shadow: var(--shadow-lg);
+      transform: translateY(-2px);
+    }
+    .wall-card.tweet-card { padding: 0; }
+    .wall-card.tweet-card .twitter-tweet { margin: 0 !important; }
+    .wall-card.tweet-card blockquote { margin: 0 !important; border: none !important; }
+    .wall-card.quote-card { padding: 28px; }
+    .quote-source {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 0.7rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: var(--sagan);
+      margin-bottom: 14px;
+    }
+    .quote-source .clutch-icon {
+      width: 14px;
+      height: 14px;
+      background: var(--sagan);
+      color: white;
+      border-radius: 3px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.55rem;
+      font-weight: 800;
+    }
+    .quote-text {
+      font-family: 'Newsreader', Georgia, serif;
+      font-size: 1.02rem;
+      color: var(--text);
+      line-height: 1.65;
+      font-style: italic;
+      margin-bottom: 18px;
+    }
+    .quote-text.large {
+      font-size: 1.15rem;
+      line-height: 1.55;
+    }
+    .quote-divider {
+      height: 1px;
+      background: var(--gray-200);
+      margin-bottom: 14px;
+    }
+    .quote-author {
+      font-weight: 700;
+      font-size: 0.85rem;
+      color: var(--gray-900);
+    }
+    .quote-role {
+      font-size: 0.75rem;
+      color: var(--gray-400);
+      margin-top: 2px;
+    }
+    .wall-cta-row {
+      text-align: center;
+      margin-top: 36px;
+    }
+    .wall-cta-row a {
+      color: var(--sagan);
+      font-weight: 600;
+      font-size: 0.9rem;
+      text-decoration: none;
+      border-bottom: 1px solid var(--sagan-light);
+      transition: border-color 0.2s;
+    }
+    .wall-cta-row a:hover { border-bottom-color: var(--sagan); }
+
+    @media (max-width: 960px) {
+      .wall-grid { columns: 2; }
+    }
+    @media (max-width: 640px) {
+      .wall-grid { columns: 1; }
+    }
+
+    /* ── FINAL CTA ── */
+    .final-cta {
+      padding: 100px 0;
+      text-align: center;
+      background: var(--gray-50);
+      border-top: 1px solid var(--border);
+    }
+    .final-cta h2 {
+      font-size: clamp(2rem, 4vw, 2.8rem);
+      font-weight: 900;
+      letter-spacing: -0.03em;
+      margin-bottom: 14px;
+      color: var(--gray-900);
+    }
+    .final-cta h2 em {
+      font-family: 'Newsreader', Georgia, serif;
+      font-style: italic;
+      font-weight: 500;
+      color: var(--sagan);
+    }
+    .final-cta p {
+      color: var(--text-secondary);
+      font-size: 1.1rem;
+      max-width: 520px;
+      margin: 0 auto 36px;
+      line-height: 1.65;
+    }
+    .final-cta .hero-cta { display: inline-block; }
+    .final-cta .hero-sub {
+      color: var(--gray-400);
+      font-size: 0.85rem;
+      margin-top: 16px;
+    }
+
+    /* ── FOOTER ── */
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 24px 0;
+      text-align: center;
+      background: var(--white);
+    }
+    footer p {
+      color: var(--gray-400);
+      font-size: 0.78rem;
+    }
+    footer a {
+      color: var(--gray-500);
+      text-decoration: none;
+    }
+    footer a:hover { color: var(--sagan); }
+
+    /* ── RESPONSIVE ── */
+    /* ── RECEIPTS SECTION ── */
+    .receipts-section {
+      background: var(--white);
+      border-top: 3px solid var(--gray-200);
+      border-bottom: 3px solid var(--gray-200);
+      padding: 80px 0;
+    }
+    .receipts-section .section-label { color: var(--red); }
+    .evidence-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+      margin-bottom: 36px;
+    }
+    .evidence-card {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-left: 4px solid var(--gray-400);
+      border-radius: var(--radius);
+      padding: 28px;
+      box-shadow: var(--shadow-sm);
+      transition: box-shadow 0.25s, transform 0.25s;
+    }
+    .evidence-card:hover {
+      box-shadow: var(--shadow-md);
+      transform: translateY(-2px);
+    }
+    .evidence-card.athena-source {
+      border-left-color: var(--red);
+    }
+    .evidence-card.neutral-source {
+      border-left-color: var(--gray-400);
+    }
+    .source-badge {
+      display: inline-block;
+      padding: 4px 10px;
+      border-radius: 100px;
+      font-size: 0.65rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      margin-bottom: 14px;
+    }
+    .source-badge.reddit {
+      background: #fff1f0;
+      color: #ff4500;
+    }
+    .source-badge.indeed {
+      background: #eef6ff;
+      color: #2557a7;
+    }
+    .source-badge.athena-com {
+      background: var(--red-light);
+      color: var(--red);
+    }
+    .evidence-quote {
+      font-family: 'Newsreader', Georgia, serif;
+      font-size: 1rem;
+      font-style: italic;
+      color: var(--text);
+      line-height: 1.65;
+      margin-bottom: 12px;
+    }
+    .evidence-detail {
+      font-size: 0.82rem;
+      color: var(--gray-500);
+      margin-bottom: 12px;
+      line-height: 1.5;
+    }
+    .evidence-link {
+      font-size: 0.82rem;
+      font-weight: 600;
+      color: var(--sagan);
+      text-decoration: none;
+      border-bottom: 1px solid var(--sagan-light);
+      transition: border-color 0.2s;
+    }
+    .evidence-link:hover {
+      border-bottom-color: var(--sagan);
+    }
+    .receipts-callout {
+      background: var(--red-light);
+      border: 1px solid #fecaca;
+      border-radius: var(--radius);
+      padding: 28px 32px;
+      text-align: center;
+      font-size: 1.02rem;
+      color: var(--text);
+      line-height: 1.65;
+      font-weight: 500;
+    }
+    .receipts-callout strong {
+      color: var(--red-dark);
+    }
+
+    /* ── TALENT SECTION ── */
+    .talent-section {
+      background: var(--sagan-bg);
+      padding: 80px 0;
+    }
+    .talent-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 24px;
+      margin-bottom: 36px;
+    }
+    .talent-card {
+      padding: 36px;
+      border-radius: var(--radius-lg);
+      border: 1px solid var(--border);
+    }
+    .talent-card.agency-card {
+      background: var(--white);
+      border-color: var(--gray-200);
+    }
+    .talent-card.direct-card {
+      background: var(--white);
+      border-color: #93c5fd;
+    }
+    .talent-card h3 {
+      font-size: 1.05rem;
+      font-weight: 700;
+      margin-bottom: 24px;
+      letter-spacing: -0.01em;
+      padding-bottom: 16px;
+      border-bottom: 1px solid var(--border);
+    }
+    .talent-card.agency-card h3 { color: var(--gray-400); border-bottom-color: var(--gray-200); }
+    .talent-card.direct-card h3 { color: var(--sagan-accent); border-bottom-color: #93c5fd; }
+    .talent-item {
+      display: flex;
+      gap: 12px;
+      margin-bottom: 16px;
+      font-size: 0.92rem;
+      line-height: 1.55;
+      color: var(--text-secondary);
+    }
+    .talent-item:last-child { margin-bottom: 0; }
+    .talent-item .icon {
+      flex-shrink: 0;
+      width: 20px;
+      height: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      font-size: 0.65rem;
+      margin-top: 2px;
+      font-weight: 700;
+    }
+    .agency-card .talent-item .icon {
+      background: var(--red-light);
+      color: var(--red);
+    }
+    .direct-card .talent-item .icon {
+      background: var(--sagan-light);
+      color: var(--sagan);
+    }
+    .direct-card .talent-item { color: var(--text); }
+    .talent-callout {
+      background: var(--white);
+      border: 1px solid #93c5fd;
+      border-radius: var(--radius);
+      padding: 28px 32px;
+      text-align: center;
+      font-size: 1.02rem;
+      color: var(--text);
+      line-height: 1.65;
+      font-weight: 500;
+    }
+    .talent-callout strong {
+      color: var(--sagan-accent);
+    }
+
+    /* ── WINS SECTION ── */
+    .wins-section {
+      background: var(--navy);
+      color: var(--white);
+      padding: 80px 0;
+    }
+    .wins-section .section-label { color: var(--sagan-light); }
+    .wins-section .section-title { color: var(--white); }
+    .wins-section .section-title em { color: rgba(255,255,255,0.7); }
+    .wins-section .section-subtitle { color: rgba(255,255,255,0.5); }
+    .wins-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+      margin-bottom: 36px;
+    }
+    .wins-card {
+      border-radius: var(--radius-lg);
+      padding: 32px 24px 28px;
+      text-align: left;
+      position: relative;
+      overflow: hidden;
+    }
+    .wins-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 3px;
+    }
+    .wins-card.winner {
+      background: rgba(59, 130, 246, 0.08);
+      border: 1px solid rgba(59, 130, 246, 0.2);
+    }
+    .wins-card.winner::before {
+      background: linear-gradient(90deg, #3b82f6, #60a5fa);
+    }
+    .wins-card.loser {
+      background: rgba(239, 68, 68, 0.06);
+      border: 1px solid rgba(239, 68, 68, 0.18);
+    }
+    .wins-card.loser::before {
+      background: linear-gradient(90deg, #ef4444, #f87171);
+    }
+    .wins-number {
+      font-family: 'Newsreader', Georgia, serif;
+      font-size: 3rem;
+      font-weight: 600;
+      line-height: 1;
+      margin-bottom: 14px;
+      letter-spacing: -0.04em;
+      font-style: italic;
+    }
+    .wins-card.winner .wins-number { color: rgba(59, 130, 246, 0.25); }
+    .wins-card.loser .wins-number { color: rgba(239, 68, 68, 0.3); }
+    .wins-label {
+      font-size: 0.62rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      margin-bottom: 10px;
+    }
+    .wins-card.winner .wins-label { color: #93c5fd; }
+    .wins-card.loser .wins-label { color: #fca5a5; }
+    .wins-card h4 {
+      font-size: 1.05rem;
+      font-weight: 800;
+      margin-bottom: 8px;
+      letter-spacing: -0.01em;
+      color: var(--white);
+    }
+    .wins-card p {
+      font-size: 0.82rem;
+      line-height: 1.55;
+      color: rgba(255,255,255,0.45);
+    }
+    .wins-bottom-text {
+      text-align: center;
+      font-size: 1.02rem;
+      color: rgba(255,255,255,0.55);
+      line-height: 1.65;
+      max-width: 640px;
+      margin: 0 auto;
+    }
+    .wins-bottom-text strong {
+      color: var(--white);
+    }
+
+    @media (max-width: 768px) {
+      .hero { padding: 60px 24px 68px; }
+      section { padding: 60px 0; }
+      .stats-inner { grid-template-columns: repeat(2, 1fr); gap: 20px; }
+      .stats-row { padding: 40px 24px; }
+      .stat-number { font-size: 1.8rem; }
+      .calc-inputs { grid-template-columns: 1fr; }
+      .calc-results { grid-template-columns: 1fr; }
+      .calc-card { padding: 28px 20px; }
+      .calc-result-amount { font-size: 1.6rem; }
+      .model-grid { grid-template-columns: 1fr; }
+      .posthire-grid { grid-template-columns: 1fr; }
+      .testimonial-grid { grid-template-columns: 1fr; }
+      .comparison-table-wrapper { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+      .comparison-table { min-width: 620px; }
+      .comparison-table td, .comparison-table thead th { padding: 12px 16px; font-size: 0.85rem; }
+      .paygap-bar-row { flex-direction: column; gap: 6px; }
+      .paygap-bar-label { width: auto; text-align: left; }
+      .middleman-row { grid-template-columns: 1fr; gap: 8px; }
+      .middleman-company { text-align: left; }
+      .evidence-grid { grid-template-columns: 1fr; }
+      .talent-grid { grid-template-columns: 1fr; }
+      .wins-grid { grid-template-columns: 1fr 1fr; }
+      .receipts-section { padding: 60px 0; }
+      .talent-section { padding: 60px 0; }
+      .wins-section { padding: 60px 0; }
+    }
+    @media (max-width: 480px) {
+      .wins-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav>
+    <div class="nav-inner">
+      <a href="#" class="nav-logo">Athena <span>vs</span> Sagan</a>
+      <a href="https://calendly.com/d/5j7-3xv-p5k/global-talent-hiring-consultation?utm_source=athena-vs-sagan&utm_term=nav" class="nav-cta" target="_blank" rel="noopener">Book a Free Call</a>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-inner">
+      <h1>Athena Bills You $3,000.<br><em>Your Talent Sees $800.</em></h1>
+      <p>Every month, Athena keeps $2,200 of the $3,000 you pay. Your assistant only gets $800. Here's what they don't want you to know.</p>
+      <a href="https://calendly.com/d/5j7-3xv-p5k/global-talent-hiring-consultation?utm_source=athena-vs-sagan&utm_term=hero" class="hero-cta" target="_blank" rel="noopener">Book a Free Consultation</a>
+      <div class="hero-sub">No commitment. No pressure. Just the truth.</div>
+    </div>
+  </section>
+
+  <!-- PAY GAP CALLOUT -->
+  <div class="paygap-section reveal">
+    <div class="paygap-inner">
+      <div class="paygap-label">The Math They Don't Want You to Do</div>
+      <h2 class="paygap-headline">Your assistant gets <em>$800.</em><br>Athena keeps <em>$2,200.</em> Every month.</h2>
+      <div class="paygap-bars">
+        <div class="paygap-bar-row">
+          <div class="paygap-bar-label">With Athena</div>
+          <div class="paygap-bar-track">
+            <div style="display:flex;height:100%;">
+              <div class="paygap-bar-fill talent">$800</div>
+              <div class="paygap-bar-fill athena">$2,200 to Athena</div>
+            </div>
+          </div>
+        </div>
+        <div class="paygap-bar-row">
+          <div class="paygap-bar-label">With Sagan</div>
+          <div class="paygap-bar-track">
+            <div style="display:flex;height:100%;">
+              <div class="paygap-bar-fill sagan-talent">100% goes to YOUR team member</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="paygap-note"><strong>The person you hire gets $800/mo no matter what.</strong> With Athena, you pay $3,000 and they pocket $2,200 &mdash; every month, forever. With Sagan, you pay a small one-time finder's fee and a $499/mo membership. And your hire works for <strong>you</strong> &mdash; not them.</div>
+    </div>
+  </div>
+
+  <!-- STATS ROW -->
+  <div class="stats-row reveal">
+    <div class="stats-inner">
+      <div class="stat-item">
+        <div class="stat-number red-color">$3,000</div>
+        <div class="stat-label">Athena Monthly Bill</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-number red-color">$800</div>
+        <div class="stat-label">What Talent Actually Gets</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-number sagan-color">Direct</div>
+        <div class="stat-label">Sagan = You Hire Them Directly</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-number sagan-color">Included</div>
+        <div class="stat-label">Post-Hire Support (Only Sagan)</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- THE RECEIPTS — SALARY EVIDENCE -->
+  <section class="receipts-section">
+    <div class="container">
+      <div class="section-header reveal">
+        <div class="section-label">The Receipts</div>
+        <h2 class="section-title">Don't Take Our Word For It. <em>Google Theirs.</em></h2>
+        <p class="section-subtitle">We didn't have to dig hard. Their own employees are posting about it on Reddit.</p>
+      </div>
+      <div class="evidence-grid">
+        <div class="evidence-card neutral-source reveal">
+          <div class="source-badge indeed">Indeed Philippines &mdash; Job Posting</div>
+          <div class="evidence-quote">&ldquo;Executive Partner &mdash; PHP 40,000 - PHP 46,000 a month&rdquo;</div>
+          <div class="evidence-detail">Active Athena job listing on Indeed Philippines (~$694&ndash;$799/mo USD). You pay $3,000/mo.</div>
+          <a href="https://ph.indeed.com/cmp/Athena-6bd74d10/jobs" class="evidence-link" target="_blank" rel="noopener">See Job Posting on Indeed &rarr;</a>
+        </div>
+        <div class="evidence-card neutral-source reveal reveal-delay-1">
+          <div class="source-badge reddit">Reddit r/buhaydigital</div>
+          <div class="evidence-quote">&ldquo;Clients pay them $3,000 a month (this is public on their website). Fixed 45,000php per month yung salary.&rdquo;</div>
+          <div class="evidence-detail">Posted by verified Athena employees (Philippines operations)</div>
+          <a href="https://www.reddit.com/r/buhaydigital/comments/12tqykf/athena_executive_assistant_salary_range_to_those/" class="evidence-link" target="_blank" rel="noopener">See on Reddit &rarr;</a>
+        </div>
+        <div class="evidence-card neutral-source reveal">
+          <div class="source-badge reddit">Reddit r/buhaydigital</div>
+          <div class="evidence-quote">&ldquo;Imagine the client paid 3000 USD a month but only 750 goes to the [assistant]&rdquo;</div>
+          <div class="evidence-detail">Athena applicant doing the math for the first time</div>
+          <a href="https://www.reddit.com/r/buhaydigital/comments/1j5faei/athena_ea_failed_final_interview/" class="evidence-link" target="_blank" rel="noopener">See on Reddit &rarr;</a>
+        </div>
+        <div class="evidence-card athena-source reveal reveal-delay-1">
+          <div class="source-badge athena-com">Athena.com</div>
+          <div class="evidence-quote">&ldquo;$3,000 per month, annual commitment ($36,000/yr)&rdquo;</div>
+          <div class="evidence-detail">Listed publicly on their own pricing page</div>
+          <a href="https://www.athena.com/pricing" class="evidence-link" target="_blank" rel="noopener">See on Athena.com &rarr;</a>
+        </div>
+      </div>
+      <div class="receipts-callout reveal">
+        Athena's own job postings list pay at &#8369;40,000&ndash;46,000/mo (~$694&ndash;$799). You pay $3,000/mo. <strong>That means Athena keeps $2,200+/mo &mdash; roughly 73% of what you pay. Every single month. And they call this a &ldquo;premium service.&rdquo;</strong>
+      </div>
+    </div>
+  </section>
+
+  <!-- BETTER TALENT -->
+  <section class="talent-section">
+    <div class="container">
+      <div class="section-header reveal">
+        <div class="section-label">Talent Quality</div>
+        <h2 class="section-title">Direct Hire = <em>Better</em> Talent</h2>
+        <p class="section-subtitle">Would you take a job knowing you get $800 while your boss charges the client $3,000? Neither would anyone good.</p>
+      </div>
+      <div class="talent-grid">
+        <div class="talent-card agency-card reveal">
+          <h3>Working for a Staffing Agency</h3>
+          <div class="talent-item">
+            <div class="icon">&#10007;</div>
+            <div>Knows you pay $3,000 but they only see $800</div>
+          </div>
+          <div class="talent-item">
+            <div class="icon">&#10007;</div>
+            <div>No path to promotion &mdash; they work for Athena, not you</div>
+          </div>
+          <div class="talent-item">
+            <div class="icon">&#10007;</div>
+            <div>Can't ask you for a raise &mdash; they work for Athena, not you</div>
+          </div>
+          <div class="talent-item">
+            <div class="icon">&#10007;</div>
+            <div>The best people leave for real jobs as soon as they can</div>
+          </div>
+          <div class="talent-item">
+            <div class="icon">&#10007;</div>
+            <div>Feels like a commodity, not a team member</div>
+          </div>
+        </div>
+        <div class="talent-card direct-card reveal reveal-delay-1">
+          <h3>Working as a Direct Hire</h3>
+          <div class="talent-item">
+            <div class="icon">&#10003;</div>
+            <div>Gets paid fairly &mdash; the salary you set goes directly to them</div>
+          </div>
+          <div class="talent-item">
+            <div class="icon">&#10003;</div>
+            <div>Real career path with promotions and growth</div>
+          </div>
+          <div class="talent-item">
+            <div class="icon">&#10003;</div>
+            <div>Direct relationship with the team they serve</div>
+          </div>
+          <div class="talent-item">
+            <div class="icon">&#10003;</div>
+            <div>Great people want real jobs &mdash; not staffing agency gigs</div>
+          </div>
+          <div class="talent-item">
+            <div class="icon">&#10003;</div>
+            <div>Feels valued, invested, and loyal to your company</div>
+          </div>
+        </div>
+      </div>
+      <div class="talent-callout reveal">
+        <strong>Great people don't stay at staffing agencies.</strong> They leave the moment they find a real job. With Athena, you're not getting the best &mdash; you're getting whoever hasn't found a way out yet.
+      </div>
+    </div>
+  </section>
+
+  <!-- MODEL COMPARISON -->
+  <section class="model-section">
+    <div class="container">
+      <div class="section-header reveal">
+        <div class="section-label">Business Model</div>
+        <h2 class="section-title">Outsourcing vs. <em>Direct Hire</em></h2>
+        <p class="section-subtitle">Athena charges $3,000/mo and keeps most of it. Sagan helps you hire someone directly &mdash; they work for you, not a middleman.</p>
+      </div>
+      <div class="model-grid">
+        <div class="model-card athena-card reveal">
+          <h3>Athena</h3>
+          <div class="model-tag">Outsourcing / Staffing</div>
+          <div class="model-price">$3,000/mo</div>
+          <div class="model-price-note">Only $800 reaches your assistant. Athena takes $2,200 every month. It never stops.</div>
+          <div class="model-item">
+            <div class="icon">&#10007;</div>
+            <div>Athena <strong>employs</strong> your assistant &mdash; they work for Athena, not you</div>
+          </div>
+          <div class="model-item">
+            <div class="icon">&#10007;</div>
+            <div>Your assistant gets $800. Athena pockets $2,200. Every single month.</div>
+          </div>
+          <div class="model-item">
+            <div class="icon">&#10007;</div>
+            <div>Can't promote, give raises, or build loyalty directly</div>
+          </div>
+          <div class="model-item">
+            <div class="icon">&#10007;</div>
+            <div>Cancel Athena, lose your assistant &mdash; or pay a <strong>$24,000 buyout fee</strong> to keep them</div>
+          </div>
+          <div class="model-item">
+            <div class="icon">&#10007;</div>
+            <div>Annual commitment required ($36K locked in)</div>
+          </div>
+          <div class="model-item">
+            <div class="icon">&#10007;</div>
+            <div>73 cents of every dollar you pay goes to Athena &mdash; not your assistant</div>
+          </div>
+        </div>
+        <div class="model-card sagan-card reveal reveal-delay-1">
+          <h3>Sagan</h3>
+          <div class="model-tag">Hiring Membership</div>
+          <div class="model-price">$499/mo + finder's fee</div>
+          <div class="model-price-note">$499/mo membership + a one-time finder's fee per hire. Your hire gets the same $800/mo &mdash; you just stop paying $2,200/mo to a middleman.</div>
+          <div class="model-item">
+            <div class="icon">&#10003;</div>
+            <div><strong>Direct hire</strong> &mdash; the person is YOUR team member from day one</div>
+          </div>
+          <div class="model-item">
+            <div class="icon">&#10003;</div>
+            <div>Your hire gets the same $800/mo &mdash; with no $2,200 skimmed off the top</div>
+          </div>
+          <div class="model-item">
+            <div class="icon">&#10003;</div>
+            <div>Promote, give raises, and build real loyalty</div>
+          </div>
+          <div class="model-item">
+            <div class="icon">&#10003;</div>
+            <div><strong>Leave Sagan? Your team member stays.</strong> They work for you, not us. Cancel anytime &mdash; your team is your team.</div>
+          </div>
+          <div class="model-item">
+            <div class="icon">&#10003;</div>
+            <div>Training support, playbooks, and a community of business owners</div>
+          </div>
+          <div class="model-item">
+            <div class="icon">&#10003;</div>
+            <div>Every dollar of salary goes to your hire &mdash; zero middleman cut</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- COMPARISON TABLE -->
+  <section class="comparison-section">
+    <div class="container">
+      <div class="section-header reveal">
+        <div class="section-label">Side-by-Side</div>
+        <h2 class="section-title">How They <em>Actually</em> Compare</h2>
+        <p class="section-subtitle">One charges you $3,000/mo to rent a person. The other helps you hire one. Guess which one wants you to never read this page.</p>
+      </div>
+      <div class="comparison-table-wrapper reveal">
+        <table class="comparison-table">
+          <thead>
+            <tr>
+              <th></th>
+              <th>Athena</th>
+              <th>Sagan <span class="winner-badge">Better Value</span></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>What Is It?</td>
+              <td class="cross">Staffing agency. You rent a person for $3,000/mo. They work for Athena.</td>
+              <td class="check">&#10003;&ensp;Hiring service. They find you someone great, you pay once, and that person is <strong>yours</strong>.</td>
+            </tr>
+            <tr>
+              <td>What Talent Gets Paid</td>
+              <td class="cross">~$800/mo<small>Identical either way</small></td>
+              <td class="check">&#10003;&ensp;~$800/mo<small>Identical either way &mdash; same caliber person</small></td>
+            </tr>
+            <tr>
+              <td>Membership</td>
+              <td class="cross">N/A &mdash; you're locked in at $3K/mo per person<small>12-month commitment required</small></td>
+              <td class="check">&#10003;&ensp;$499/mo &mdash; same price whether you hire 1 or 10<small>Hiring help, training support, community, 90-day guarantee. Cancel anytime &mdash; keep your team.</small></td>
+            </tr>
+            <tr>
+              <td>Finder's Fee</td>
+              <td>$0<small>Because you're renting, not hiring</small></td>
+              <td>$1,728 per person<small>One-time. That's the cost of Sagan finding you someone great.</small></td>
+            </tr>
+            <tr>
+              <td>Monthly Fee Per Person</td>
+              <td class="cross">$2,200/mo &mdash; forever<small>That's $26,400/yr that doesn't go to your hire</small></td>
+              <td class="check">&#10003;&ensp;$0<small>Once they're hired, you pay them directly. No middleman.</small></td>
+            </tr>
+            <tr>
+              <td>Cancel?</td>
+              <td class="cross">Lose your assistant &mdash; or pay $24,000 buyout</td>
+              <td class="check">&#10003;&ensp;Keep every hire. Membership is separate from your team.</td>
+            </tr>
+            <tr>
+              <td>Year 1: What the Company Gets<small>Not counting your hire's salary</small></td>
+              <td class="cross">$26,400 to Athena</td>
+              <td><strong class="check">$7,716 to Sagan</strong><small>Finder's fee + membership. And the person is <strong>yours</strong>.</small></td>
+            </tr>
+            <tr>
+              <td>Year 2</td>
+              <td class="cross">$26,400 to Athena &mdash; again</td>
+              <td><strong class="check">$5,988 to Sagan</strong><small>Just the membership. No new fees.</small></td>
+            </tr>
+            <tr>
+              <td>Over 3 Years</td>
+              <td class="cross">$79,200 to Athena</td>
+              <td><strong class="check">$19,692 to Sagan</strong><small>You save over $59,000.</small></td>
+            </tr>
+            <tr>
+              <td>Who Employs the Talent?</td>
+              <td class="cross">Athena employs them</td>
+              <td class="check">&#10003;&ensp;YOU employ them directly</td>
+            </tr>
+            <tr>
+              <td>If You Cancel</td>
+              <td class="cross">You lose your assistant (or pay $24,000 buyout)</td>
+              <td class="check">&#10003;&ensp;Your team member stays. They're yours. Forever.</td>
+            </tr>
+            <tr>
+              <td>Post-Hire Support</td>
+              <td class="neutral">Performance management only</td>
+              <td class="check">&#10003;&ensp;Training, playbooks, community (with membership)</td>
+            </tr>
+            <tr>
+              <td>Talent Regions</td>
+              <td>Philippines and Kenya</td>
+              <td>Latin America, Africa, Asia &mdash; global</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- CALCULATOR -->
+  <section class="calculator-section">
+    <div class="container">
+      <div class="section-header reveal">
+        <div class="section-label">Cost Calculator</div>
+        <h2 class="section-title">See How Much You <em>Actually</em> Save</h2>
+        <p class="section-subtitle">Athena is counting on you not running these numbers. Go ahead — they can't stop you.</p>
+      </div>
+      <div class="calc-card reveal">
+        <div class="calc-inputs">
+          <div class="calc-field">
+            <label for="hires">Number of Assistants</label>
+            <select id="hires">
+              <option value="1" selected>1 assistant</option>
+              <option value="2">2 assistants</option>
+              <option value="3">3 assistants</option>
+              <option value="5">5 assistants</option>
+              <option value="10">10 assistants</option>
+            </select>
+          </div>
+          <div class="calc-field">
+            <label for="years">Timeframe</label>
+            <select id="years">
+              <option value="1">1 year</option>
+              <option value="2" selected>2 years</option>
+              <option value="3">3 years</option>
+              <option value="5">5 years</option>
+            </select>
+          </div>
+        </div>
+        <div class="calc-divider"></div>
+        <div class="calc-results">
+          <div class="calc-result-card athena-calc">
+            <div class="calc-result-label">Money Going to Athena</div>
+            <div class="calc-result-amount" id="athena-cost">$52,800</div>
+            <div class="calc-result-detail" id="athena-detail">$2,200/mo middleman fee &times; 1 hire &times; 24 months</div>
+          </div>
+          <div class="calc-result-card sagan-calc">
+            <div class="calc-result-label">Money Going to Sagan</div>
+            <div class="calc-result-amount" id="sagan-cost">$13,704</div>
+            <div class="calc-result-detail" id="sagan-detail">$1,728 placement (18%) + $11,976 membership ($499/mo)</div>
+            <div class="calc-result-detail" id="sagan-membership-note" style="margin-top:4px;opacity:0.7;font-size:.85em">Membership is flat &mdash; not per-hire. Scales beautifully.</div>
+          </div>
+        </div>
+        <div class="calc-savings">
+          <div class="calc-savings-label">You Save</div>
+          <div class="calc-savings-amount" id="savings-amount">$39,096</div>
+          <div class="calc-savings-note" id="savings-note">Your hire gets paid the same ~$800/mo either way. The only question is how much goes to the middleman.</div>
+        </div>
+        <div class="calc-talent-note">
+          <strong>Sagan finds you great people. Athena rents them to you.</strong> With Sagan, you pay $499/mo membership + a one-time finder's fee per person. They work for you. Cancel anytime &mdash; keep your whole team.
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MIDDLEMAN BREAKDOWN -->
+  <section class="middleman-section">
+    <div class="container">
+      <div class="section-header reveal">
+        <div class="section-label">Follow the Money</div>
+        <h2 class="section-title">Where Does Your <em>Money</em> Go?</h2>
+        <p class="section-subtitle">Your hire costs $800/mo either way. The only difference? Athena charges you $2,200 on top &mdash; every month, forever. Sagan charges $499/mo plus a one-time finder's fee. That's it.</p>
+      </div>
+      <div class="middleman-visual reveal">
+        <div class="middleman-row athena-row">
+          <div class="middleman-company">Athena<small>$3,000/mo billed to you</small></div>
+          <div class="middleman-bar-container">
+            <div class="middleman-bar">
+              <div class="talent-share">$800</div>
+              <div class="company-share">$2,200 to Athena</div>
+            </div>
+            <div class="middleman-bar-labels">
+              <span>Your assistant: 27%</span>
+              <span>Athena's cut: 73%</span>
+            </div>
+          </div>
+        </div>
+        <div class="middleman-row sagan-row">
+          <div class="middleman-company">Sagan<small>You set the salary directly</small></div>
+          <div class="middleman-bar-container">
+            <div class="middleman-bar">
+              <div class="talent-share">100% goes to YOUR team member</div>
+            </div>
+            <div class="middleman-bar-labels">
+              <span>Your hire: 100%</span>
+              <span>Middleman cut: $0</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- POST-HIRE -->
+  <section class="posthire-section">
+    <div class="container">
+      <div class="section-header reveal">
+        <div class="section-label">After the Hire</div>
+        <h2 class="section-title">What Happens <em>After</em> They've Got You?</h2>
+        <p class="section-subtitle">With Athena, you're locked in. Cancel and you lose the person. It's a beautifully designed trap — unless you just... don't walk into it.</p>
+      </div>
+      <div class="posthire-grid">
+        <div class="posthire-card athena-card reveal">
+          <h3>Athena</h3>
+          <div class="posthire-item">
+            <div class="icon">&#10007;</div>
+            <div>Your assistant works for Athena &mdash; not for you</div>
+          </div>
+          <div class="posthire-item">
+            <div class="icon">&#10007;</div>
+            <div>Cancel = lose your assistant immediately</div>
+          </div>
+          <div class="posthire-item">
+            <div class="icon">&#10007;</div>
+            <div>Can't give direct raises or promotions</div>
+          </div>
+          <div class="posthire-item">
+            <div class="icon">&#10007;</div>
+            <div>$3,000/mo never goes down &mdash; not after year 1, 2, or 5</div>
+          </div>
+          <div class="posthire-item">
+            <div class="icon">&#10007;</div>
+            <div>No peer community or executive network</div>
+          </div>
+        </div>
+        <div class="posthire-card sagan-card reveal reveal-delay-1">
+          <h3>Sagan</h3>
+          <div class="posthire-item">
+            <div class="icon">&#10003;</div>
+            <div><strong>Your hire is YOUR team member</strong> &mdash; direct, loyal, and permanent</div>
+          </div>
+          <div class="posthire-item">
+            <div class="icon">&#10003;</div>
+            <div><strong>Cancel Sagan anytime</strong> &mdash; your team member stays. They work for you, not us. You never lose your team.</div>
+          </div>
+          <div class="posthire-item">
+            <div class="icon">&#10003;</div>
+            <div><strong>Give raises, promotions, and equity</strong> &mdash; build real loyalty</div>
+          </div>
+          <div class="posthire-item">
+            <div class="icon">&#10003;</div>
+            <div><strong>The finder's fee is one-time.</strong> Year 2? Just the membership. With Athena, it's $36K/yr forever.</div>
+          </div>
+          <div class="posthire-item">
+            <div class="icon">&#10003;</div>
+            <div><strong>Community</strong> of business owners who hire globally &mdash; you're not doing this alone</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS -->
+  <section class="testimonials-section">
+    <div class="container">
+      <div class="section-header reveal">
+        <div class="section-label">What Members Say</div>
+        <h2 class="section-title">Trusted by Executives Scaling<br>With <em>Global Talent</em></h2>
+        <p style="color: var(--slate-light); font-size: 0.85rem; margin-top: 8px;">Verified reviews on <a href="https://clutch.co/profile/sagan-passport" target="_blank" rel="noopener" style="color: var(--sagan); text-decoration: underline;">Clutch</a> &mdash; 4.8&#9733; from 45 reviews</p>
+      </div>
+      <div class="testimonial-grid">
+        <div class="testimonial-card reveal">
+          <div class="testimonial-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <div class="testimonial-text">&ldquo;Very differentiated by including training and assessing as part of their offering. Many firms just source candidates and that is it.&rdquo;</div>
+          <div class="testimonial-divider"></div>
+          <div class="testimonial-author">Mike Smith</div>
+          <div class="testimonial-role">Managing Partner, Scrappy Capital</div>
+        </div>
+        <div class="testimonial-card reveal reveal-delay-1">
+          <div class="testimonial-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <div class="testimonial-text">&ldquo;The business model makes it extremely affordable to enter the global talent pool without significant one-time fees. Great ongoing resources, and they continue to develop tools as part of the membership.&rdquo;</div>
+          <div class="testimonial-divider"></div>
+          <div class="testimonial-author">Ryan Shackelford</div>
+          <div class="testimonial-role">Owner &amp; CPA, Shack Accounting</div>
+        </div>
+        <div class="testimonial-card reveal reveal-delay-2">
+          <div class="testimonial-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <div class="testimonial-text">&ldquo;They challenge you to think differently about global talent. They educate you on a complicated market. And they deliver the goods.&rdquo;</div>
+          <div class="testimonial-divider"></div>
+          <div class="testimonial-author">Greg Van Horn</div>
+          <div class="testimonial-role">Owner, Bumble Roofing</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WALL OF LOVE -->
+  <section class="wall-section">
+    <div class="container">
+      <div class="section-header reveal">
+        <div class="section-label">Wall of Love</div>
+        <h2 class="section-title">Don't Take <em>Our</em> Word For It</h2>
+        <p class="section-subtitle">Real posts. Real reviews. From real business owners who chose Sagan.</p>
+      </div>
+      <div class="wall-grid">
+
+        <div class="wall-card tweet-card reveal">
+          <blockquote class="twitter-tweet" data-conversation="none" data-dnt="true"><a href="https://twitter.com/StrongpointRich/status/1822046644256260219"></a></blockquote>
+        </div>
+
+        <div class="wall-card quote-card reveal">
+          <div class="quote-source"><span class="clutch-icon">&#9733;</span> Verified on Clutch</div>
+          <div class="quote-text large">&ldquo;The peace of mind that we're able to deliver to our clients starts with the partnership with your company.&rdquo;</div>
+          <div class="quote-divider"></div>
+          <div class="quote-author">Vish Mazumder</div>
+          <div class="quote-role">Franchisee, Mighty Dog Roofing</div>
+        </div>
+
+        <div class="wall-card tweet-card reveal">
+          <blockquote class="twitter-tweet" data-dnt="true"><a href="https://twitter.com/joshuamschultz/status/1787224837980635274"></a></blockquote>
+        </div>
+
+        <div class="wall-card quote-card reveal">
+          <div class="quote-source"><span class="clutch-icon">&#9733;</span> Verified on Clutch</div>
+          <div class="quote-text">&ldquo;I had VERY high expectations when choosing a global talent provider and Sagan Passport has surpassed even those. I have recommended Sagan to 10+ friends and will continue to do so.&rdquo;</div>
+          <div class="quote-divider"></div>
+          <div class="quote-author">DeAnn Gruber</div>
+          <div class="quote-role">Franchisee, Massage Envy</div>
+        </div>
+
+        <div class="wall-card tweet-card reveal">
+          <blockquote class="twitter-tweet" data-dnt="true"><a href="https://twitter.com/Chad_Nelson_/status/1801277850193973269"></a></blockquote>
+        </div>
+
+        <div class="wall-card quote-card reveal">
+          <div class="quote-source"><span class="clutch-icon">&#9733;</span> Verified on Clutch</div>
+          <div class="quote-text large">&ldquo;I have hired well over 100 people in my career. Sagan led the way for us the entire time. The team is collaborative and communicative at each step.&rdquo;</div>
+          <div class="quote-divider"></div>
+          <div class="quote-author">Warren Lzo</div>
+          <div class="quote-role">Franchisee, PropertyCraft Management</div>
+        </div>
+
+        <div class="wall-card tweet-card reveal">
+          <blockquote class="twitter-tweet" data-dnt="true"><a href="https://twitter.com/DIBookkeeping/status/1793025290760798350"></a></blockquote>
+        </div>
+
+        <div class="wall-card quote-card reveal">
+          <div class="quote-source"><span class="clutch-icon">&#9733;</span> Verified on Clutch</div>
+          <div class="quote-text">&ldquo;The time to hire was faster than we have ever been able to accomplish internally. The quality of hire appears to be as good or better than we have had the ability to hire locally.&rdquo;</div>
+          <div class="quote-divider"></div>
+          <div class="quote-author">Mark Miller</div>
+          <div class="quote-role">Franchisee, Soccer Shots Buffalo</div>
+        </div>
+
+        <div class="wall-card tweet-card reveal">
+          <blockquote class="twitter-tweet" data-dnt="true"><a href="https://twitter.com/jakelywakely/status/1782529918565310975"></a></blockquote>
+        </div>
+
+        <div class="wall-card quote-card reveal">
+          <div class="quote-source"><span class="clutch-icon">&#9733;</span> Verified on Clutch</div>
+          <div class="quote-text large">&ldquo;As a new business owner, it has been worth every penny. Sagan Passport strives to just blow us away with valuable work that seems to improve every month.&rdquo;</div>
+          <div class="quote-divider"></div>
+          <div class="quote-author">John Kelly</div>
+          <div class="quote-role">Franchisee, Rolling Suds</div>
+        </div>
+
+        <div class="wall-card tweet-card reveal">
+          <blockquote class="twitter-tweet" data-dnt="true"><a href="https://twitter.com/brandonadixon/status/1798342882702790712"></a></blockquote>
+        </div>
+
+        <div class="wall-card tweet-card reveal">
+          <blockquote class="twitter-tweet" data-dnt="true"><a href="https://twitter.com/BroknClok/status/1776285301062729752"></a></blockquote>
+        </div>
+
+      </div>
+      <div class="wall-cta-row reveal">
+        <a href="https://clutch.co/profile/sagan-passport" target="_blank" rel="noopener">Read all 45 verified reviews on Clutch &rarr;</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- EVERYONE WINS -->
+  <section class="wins-section">
+    <div class="container">
+      <div class="section-header reveal">
+        <div class="section-label">Who Wins?</div>
+        <h2 class="section-title">Everyone Wins. <em>Except the Middleman.</em></h2>
+        <p class="section-subtitle">You save money. Your hire gets paid fairly. The only loser? The middleman.</p>
+      </div>
+      <div class="wins-grid">
+        <div class="wins-card winner reveal">
+          <div class="wins-number">01</div>
+          <div class="wins-label">Winner</div>
+          <h4>You Save Money</h4>
+          <p>Same person, same pay. You just stop giving Athena $2,200 every month. The finder's fee? You pay it once.</p>
+        </div>
+        <div class="wins-card winner reveal reveal-delay-1">
+          <div class="wins-number">02</div>
+          <div class="wins-label">Winner</div>
+          <h4>Your Hire Earns More</h4>
+          <p>All of their pay goes to them &mdash; not 27%. They're happier and more loyal.</p>
+        </div>
+        <div class="wins-card winner reveal reveal-delay-2">
+          <div class="wins-number">03</div>
+          <div class="wins-label">Winner</div>
+          <h4>You Get Better People</h4>
+          <p>Great people want real jobs, not agency gigs. They'll build a career with you.</p>
+        </div>
+        <div class="wins-card loser reveal">
+          <div class="wins-number">&times;</div>
+          <div class="wins-label">Loser</div>
+          <h4>The Middleman</h4>
+          <p>They lose their $2,200/mo cut. We're sure they'll be fine.</p>
+        </div>
+      </div>
+      <div class="wins-bottom-text reveal">
+        <strong>You save money. Your hire earns more. You get better people.</strong> The only ones upset? The middleman. Thoughts and prayers.
+      </div>
+    </div>
+  </section>
+
+  <!-- FINAL CTA -->
+  <section class="final-cta">
+    <div class="container reveal">
+      <h2>Stop Paying a <em>73% Markup.</em></h2>
+      <p>Same talent, same salary. $499/mo membership + a one-time finder's fee &mdash; instead of $2,200 to a middleman every month. And if you cancel? Your team member stays. There's no catch.</p>
+      <a href="https://calendly.com/d/5j7-3xv-p5k/global-talent-hiring-consultation?utm_source=athena-vs-sagan&utm_term=bottom-cta" class="hero-cta" target="_blank" rel="noopener">Book a Free Consultation</a>
+      <div class="hero-sub">No commitment &bull; No pressure &bull; Just a conversation Athena would rather you didn't have</div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container">
+      <p>&copy; 2026 Sagan. All information based on publicly available data. <a href="https://saganpassport.com" target="_blank" rel="noopener">saganpassport.com</a></p>
+    </div>
+  </footer>
+
+  <!-- Twitter embed widget -->
+  <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+  <script>
+    // ── Scroll reveal ──
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) entry.target.classList.add('visible');
+      });
+    }, { threshold: 0.1, rootMargin: '0px 0px -30px 0px' });
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+    // ── Calculator ──
+    const hiresSelect = document.getElementById('hires');
+    const yearsSelect = document.getElementById('years');
+
+    function fmt(n) { return '$' + n.toLocaleString('en-US'); }
+
+    function calculate() {
+      const hires = parseInt(hiresSelect.value) || 1;
+      const years = parseInt(yearsSelect.value) || 2;
+      const months = years * 12;
+
+      const talentMonthly = 800;
+      const annualSalary = talentMonthly * 12;
+
+      // Money going to Athena (middleman fee only, per-hire)
+      const athenaMiddleman = 2200 * hires * months;
+
+      // Money going to Sagan: placement (per-hire) + membership (flat, not per-hire)
+      const saganPlacement = Math.round(annualSalary * 0.18 * hires);
+      const saganMembership = 499 * months;
+      const saganTotal = saganPlacement + saganMembership;
+
+      document.getElementById('athena-cost').textContent = fmt(athenaMiddleman);
+      document.getElementById('athena-detail').textContent =
+        '$2,200/mo \u00d7 ' + hires + (hires > 1 ? ' people' : ' person') + ' \u00d7 ' + months + ' months';
+
+      document.getElementById('sagan-cost').textContent = fmt(saganTotal);
+      document.getElementById('sagan-detail').textContent =
+        fmt(saganPlacement) + ' finder\u2019s fee + ' + fmt(saganMembership) + ' membership';
+
+      document.getElementById('sagan-membership-note').textContent =
+        hires > 1
+          ? 'Same $499/mo membership whether you hire ' + hires + ' people or 1.'
+          : 'Same $499/mo membership whether you hire 1 person or 10.';
+
+      const savings = athenaMiddleman - saganTotal;
+      document.getElementById('savings-amount').textContent = fmt(savings);
+      document.getElementById('savings-note').textContent =
+        'Your hire gets paid the same either way. The only difference is how much goes to the middleman.';
+
+      var talentNote = document.querySelector('.calc-talent-note');
+      talentNote.innerHTML =
+        '<strong>Sagan finds you great people. Athena rents them to you.</strong> Athena takes ' + fmt(athenaMiddleman) + ' over ' + years + (years === 1 ? ' year' : ' years') + '. Sagan takes ' + fmt(saganTotal) + '. You save ' + fmt(savings) + '. Cancel anytime \u2014 keep your whole team.';
+    }
+
+    hiresSelect.addEventListener('change', calculate);
+    yearsSelect.addEventListener('change', calculate);
+    calculate();
+  </script>
+
+</body>
+</html>
